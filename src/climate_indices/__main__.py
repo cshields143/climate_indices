@@ -1278,10 +1278,11 @@ def _parallel_process(index: str,
                 "input_type": input_type,
                 "args": args,
             }
-            if i < (required_processes - 1):
-                params["sub_array_end"] = split_indices[i + 1]
-            else:
-                params["sub_array_end"] = None
+            #if i < (required_processes - 1):
+            #    params["sub_array_end"] = split_indices[i + 1]
+            #else:
+            #    params["sub_array_end"] = None
+            params["sub_array_end"] = None
 
             chunk_params.append(params)
 
